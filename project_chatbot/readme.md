@@ -19,7 +19,7 @@
 
 ## Anleitung zur Nutzung
 
-### 1 Virtuelle Umgebung anlegen und aktivieren
+### 1. Virtuelle Umgebung anlegen und aktivieren
 
 #### Virtuelle Umgebung anlegen
 ```bash
@@ -30,12 +30,12 @@ python -m venv venv
 Windows
 ```bash
 venv\Scripts\activate
-````
+```
 Linux/macOS
 ```bash
 source venv/bin/activate
 ```
-### 2 Abhängigkeiten installieren
+### 2. Abhängigkeiten installieren
 ```bash
 pip install -r requirements.txt
 ```
@@ -43,11 +43,9 @@ oder
 ```bash
 pip install flask
 ```
-## 3. Projekt starten
+### 3. Projekt starten
 ```bash
-cd project_chatbot
-source venv/bin/activate
 python scripts/main.py   # Startet Flask auf http://localhost:5050
 ```
-### webseite öffnen
-Browser öffnen → http://localhost:5050
+### 4. Webseite öffnen
+Browser öffnen → [http://localhost:5050](http://localhost:5050)
