@@ -29,8 +29,9 @@ def get_git_info():
             ['git', 'rev-parse', 'HEAD']
         ).strip().decode('utf-8')
         git_tag = subprocess.check_output(
-            ['git', 'describe', '--tags', '--abbrev=1']
+            ['git', 'describe', '--tags']
         ).strip().decode('utf-8')
+        git_tag = git_tag.split('-')[0]   # nur der erste Teil = Sprint_2
         return commit_id, git_tag
     except subprocess.CalledProcessError:
         # Falls keine Tags existieren oder Git nicht verfügbar ist
