@@ -25,9 +25,7 @@
       <img class="bubble-avatar" src="{{ url_for('static', filename='logo.svg') }}" alt="Bot">
       <div class="bubble-body">
         <p class="muted small">Begrüßungsnachricht:</p>
-        <div class="bubble-text">
-          {{ chatbot.welcomemessage or "Hallo! Ich bin dein Chatbot. Wie kann ich helfen?" }}
-        </div>
+        <div class="bubble-text">{{ chatbot.welcomemessage or "Hallo! Ich bin dein Chatbot. Wie kann ich helfen?" }}</div>
         <div class="meta">jetzt</div>
       </div>
     </div>
