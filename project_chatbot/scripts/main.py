@@ -303,10 +303,16 @@ def register():
     # POST: handle registration
     username = (request.form.get('username') or '').strip()
     password = request.form.get('password') or ''
+    repeat_password = request.form.get('repeat_password') or ''
 
     # Basic validation
     if not username or not password:
         flash('Benutzername und Passwort sind erforderlich.', 'error')
+        return render_template('register.html', title='Registrieren', username=username)
+
+    # Check if passwords match
+    if password != repeat_password:
+        flash('Passwörter stimmen nicht überein.', 'error')
         return render_template('register.html', title='Registrieren', username=username)
 
     # Check for existing user
